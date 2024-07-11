@@ -11,6 +11,7 @@ const links = [
 
 export function Header() {
   //const [opened, { toggle }] = useDisclosure(false);
+  // const { toggleColorScheme } = useMantineColorScheme();
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
@@ -49,16 +50,12 @@ export function Header() {
           />
           <Group>{items}</Group>
         </Group>
-        <Group
-          justify="center"
-          px="md"
-          visibleFrom="xs"
-          className={classes.headerEnd}
-        >
+        <Group justify="center" visibleFrom="xs" className={classes.headerEnd}>
           <Button variant="default" px="xs">
             Log in
           </Button>
           <Button px="xs">Sign up</Button>
+          {/* <Button onClick={() => toggleColorScheme()}>Change Theme</Button> */}
         </Group>
         {/* <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" /> */}
       </Container>

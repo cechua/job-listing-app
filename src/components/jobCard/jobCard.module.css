@@ -1,0 +1,44 @@
+.card {
+  background-color: var(--mantine-color-body);
+  height: 100%;
+  width: 80%;
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: rem(300px);
+    width: 100%;
+  }
+}
+
+.image {
+  align-self: flex-start;
+  padding: var(--mantine-spacing-sm);
+}
+
+.details {
+  width: 100%;
+  flex-grow: 1;
+  padding: var(--mantine-spacing-xs);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+    height: rem(300px);
+  }
+}
+
+.body {
+  flex-basis: rem(400px);
+  @media (max-width: $mantine-breakpoint-lg) {
+    flex-basis: rem(300px);
+  }
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: rem(250px);
+  }
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-basis: rem(150px);
+  }
+}
+
+.otherDetails {
+  @media (max-width: $mantine-breakpoint-xs) {
+    justify-content: flex-start;
+  }
+}
