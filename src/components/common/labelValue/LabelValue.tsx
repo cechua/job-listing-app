@@ -8,7 +8,7 @@ interface LabelValueProps {
 
 const LabelValue = ({ label, value }: LabelValueProps) => {
   return (
-    <Group className={classes.labelValue}>
+    <Group className={classes.labelValue} justify="start" align="start">
       <Text className={classes.label}>{label}</Text>
       <Text className={classes.value}>{value}</Text>
     </Group>

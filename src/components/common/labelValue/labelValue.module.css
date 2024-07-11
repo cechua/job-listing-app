@@ -1,7 +1,7 @@
 .label {
-  min-width: rem(140px);
-  @media (max-width: $mantine-breakpoint-md) {
-    min-width: rem(100px);
+  min-width: rem(150px);
+  @media (max-width: $mantine-breakpoint-xxs) {
+    min-width: rem(130px);
   }
 }
 
@@ -10,4 +10,7 @@
   @media (max-width: $mantine-breakpoint-md) {
     --text-fz: 12px;
   }
+}
+
+.value {
 }

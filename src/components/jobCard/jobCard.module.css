@@ -1,21 +1,22 @@
 .card {
   background-color: var(--mantine-color-body);
   height: 100%;
-  width: 75%;
-  @media (max-width: $mantine-breakpoint-xs) {
-    height: rem(300px);
+  width: 80%;
+  @media (max-width: $mantine-breakpoint-xxs) {
+    height: rem(380px);
     width: 100%;
+  }
+  @media (min-width: $mantine-breakpoint-xxs) and (max-width: $mantine-breakpoint-xs) {
+    height: rem(380px);
+    width: 90%;
   }
 }
 
 .image {
-  align-self: flex-start;
-  padding: var(--mantine-spacing-sm);
 }
 
 .details {
   width: 100%;
-  flex-grow: 1;
   padding: var(--mantine-spacing-xs) 0;
 
   @media (max-width: $mantine-breakpoint-xs) {
@@ -24,22 +25,14 @@
   }
 }
 
-.body {
-  flex-basis: rem(400px);
-  @media (max-width: $mantine-breakpoint-lg) {
-    flex-basis: rem(300px);
-  }
-  @media (max-width: $mantine-breakpoint-md) {
-    flex-basis: rem(250px);
-  }
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-basis: rem(150px);
-  }
-}
-
 .otherDetails {
+  flex-grow: 1;
   padding: rem(2px) 0;
   @media (max-width: $mantine-breakpoint-xs) {
     justify-content: flex-start;
   }
+}
+
+.ctaContainer {
+  margin-top: rem(8px);
 }

@@ -12,7 +12,8 @@ const links = [
 export function Header() {
   //const [opened, { toggle }] = useDisclosure(false);
   // const { toggleColorScheme } = useMantineColorScheme();
-  const [active, setActive] = useState(links[0].link);
+  const currentPath = window.location.pathname;
+  const [active, setActive] = useState(currentPath);
 
   const items = links.map((link) => (
     <Link
