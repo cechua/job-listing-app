@@ -6,6 +6,7 @@
 }
 
 .labelValue {
+  --text-fz: 14px;
   @media (max-width: $mantine-breakpoint-md) {
     --text-fz: 12px;
   }

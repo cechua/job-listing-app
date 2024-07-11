@@ -1,7 +1,7 @@
 .card {
   background-color: var(--mantine-color-body);
   height: 100%;
-  width: 80%;
+  width: 75%;
   @media (max-width: $mantine-breakpoint-xs) {
     height: rem(300px);
     width: 100%;
@@ -38,6 +38,7 @@
 }
 
 .otherDetails {
+  padding: rem(2px) 0;
   @media (max-width: $mantine-breakpoint-xs) {
     justify-content: flex-start;
   }
