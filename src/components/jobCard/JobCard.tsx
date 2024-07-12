@@ -26,7 +26,6 @@ const JobCard = ({ isAppliedView }: JobCardProps) => {
           <Flex>
             <Image
               src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
-              className={classes.image}
               radius={100}
               w={90}
               h={90}
@@ -35,7 +34,7 @@ const JobCard = ({ isAppliedView }: JobCardProps) => {
         </Grid.Col>
         <Grid.Col span={8} order={{ base: 3, md: 2 }}>
           <Grid grow columns={8}>
-            <Grid.Col span={{ xs: 5, sm: 4 }} order={{ base: 1 }}>
+            <Grid.Col span={{ xs: 5, sm: 4, md: 5 }} order={{ base: 1 }}>
               <Flex direction="column" justify="space-between" gap={8} h="100%">
                 <Stack gap={0}>
                   <Text tt="uppercase" c="solid" fw={700} size="lg">
@@ -65,7 +64,7 @@ const JobCard = ({ isAppliedView }: JobCardProps) => {
                 </Group>
               </Flex>
             </Grid.Col>
-            <Grid.Col span={{ base: 4 }} order={{ base: 2 }}>
+            <Grid.Col span={{ xs: 3, sm: 3 }} order={{ base: 2 }}>
               <Stack className={classes.otherDetails} justify="space-around">
                 <LabelValue label="Job Type:" value="Full-time" />
                 <LabelValue label="Setup:" value="Hybrid" />

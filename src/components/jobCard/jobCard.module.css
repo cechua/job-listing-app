@@ -1,5 +1,4 @@
 .card {
-  background-color: var(--mantine-color-body);
   height: 100%;
   width: 80%;
   @media (max-width: $mantine-breakpoint-xxs) {
@@ -9,19 +8,6 @@
   @media (min-width: $mantine-breakpoint-xxs) and (max-width: $mantine-breakpoint-xs) {
     height: rem(380px);
     width: 90%;
-  }
-}
-
-.image {
-}
-
-.details {
-  width: 100%;
-  padding: var(--mantine-spacing-xs) 0;
-
-  @media (max-width: $mantine-breakpoint-xs) {
-    flex-direction: column;
-    height: rem(300px);
   }
 }
 
