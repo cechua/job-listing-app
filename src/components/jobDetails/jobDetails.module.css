@@ -1,4 +1,17 @@
 .container {
-  border: 1px solid red;
-  border-radius: 5px;
+}
+
+.jobDetailContainer {
+  border-left: 1px solid #eeeeee;
+  margin-left: 5px;
+  min-height: calc(100vh - rem(100px));
+  max-height: calc(100vh - rem(100px));
+  overflow: auto;
+  flex-grow: 3;
+}
+
+.jobSummaryContainer {
+  max-height: calc(100vh - rem(100px));
+  overflow: auto;
+  flex-grow: 1;
 }
