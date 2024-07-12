@@ -1,6 +1,24 @@
 .container {
 }
 
+.jobSummaryContainer {
+  max-height: calc(100vh - rem(100px));
+  overflow: auto;
+  flex-grow: 1;
+  padding-right: rem(10px);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #eeeeee;
+}
+
 .jobDetailContainer {
   border-left: 1px solid #eeeeee;
   margin-left: 5px;
@@ -8,10 +26,4 @@
   max-height: calc(100vh - rem(100px));
   overflow: auto;
   flex-grow: 3;
-}
-
-.jobSummaryContainer {
-  max-height: calc(100vh - rem(100px));
-  overflow: auto;
-  flex-grow: 1;
 }

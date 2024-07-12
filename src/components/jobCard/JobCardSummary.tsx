@@ -7,7 +7,7 @@ import {
   Stack,
   Grid,
   Flex,
-  Chip,
+  Badge,
 } from '@mantine/core';
 import classes from './jobCard.module.css';
 import { Link } from 'react-router-dom';
@@ -71,9 +71,9 @@ const JobCardSummary = () => {
                 justify="space-between"
                 h="100%"
               >
-                <Chip size="xs">Full-time</Chip>
-                <Chip size="xs">Hybrid</Chip>
-                <Chip size="xs">Php100,000</Chip>
+                <Badge size="sm">Full-time</Badge>
+                <Badge size="sm">Hybrid</Badge>
+                <Badge size="sm">Php100,000</Badge>
               </Flex>
             </Grid.Col>
           </Grid>

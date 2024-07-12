@@ -5,9 +5,9 @@ import {
   Text,
   Divider,
   Flex,
-  Chip,
   Button,
   Container,
+  Badge,
 } from '@mantine/core';
 import LabelValue from '../common/labelValue/LabelValue';
 
@@ -39,9 +39,9 @@ const JobDetailSummary = ({
             {jobLocation}
           </Text>
           <Flex pt={4} gap={8}>
-            <Chip size="xs">Full-time</Chip>
-            <Chip size="xs">Hybrid</Chip>
-            <Chip size="xs">Php100,000</Chip>
+            <Badge size="sm">Full-time</Badge>
+            <Badge size="sm">Hybrid</Badge>
+            <Badge size="sm">Php100,000</Badge>
           </Flex>
         </Stack>
       </Group>

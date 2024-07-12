@@ -5,10 +5,10 @@ import {
   Text,
   Group,
   Stack,
-  Chip,
   ActionIcon,
   Grid,
   Flex,
+  Badge,
 } from '@mantine/core';
 import classes from './jobCard.module.css';
 import LabelValue from '../common/labelValue/LabelValue';
@@ -78,7 +78,7 @@ const JobCard = ({ isAppliedView }: JobCardProps) => {
         <Grid.Col span={{ base: 2 }} order={{ base: 2, md: 3 }}>
           {isAppliedView && (
             <Flex className={classes.ctaContainer} justify="flex-end" gap={24}>
-              <Chip>test</Chip>
+              <Badge>test</Badge>
               <ActionIcon
                 variant="filled"
                 bg="red"
