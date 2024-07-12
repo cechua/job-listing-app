@@ -11,14 +11,6 @@
   }
 }
 
-.otherDetails {
-  flex-grow: 1;
-  padding: rem(2px) 0;
-  @media (max-width: $mantine-breakpoint-xs) {
-    justify-content: flex-start;
-  }
-}
-
 .ctaContainer {
   margin-top: rem(8px);
 }

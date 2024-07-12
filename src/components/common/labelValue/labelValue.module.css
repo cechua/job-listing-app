@@ -1,5 +1,5 @@
 .label {
-  min-width: rem(150px);
+  min-width: rem(140px);
   @media (max-width: $mantine-breakpoint-xxs) {
     min-width: rem(130px);
   }

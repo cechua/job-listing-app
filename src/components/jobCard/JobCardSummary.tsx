@@ -5,38 +5,37 @@ import {
   Text,
   Group,
   Stack,
-  Chip,
-  ActionIcon,
   Grid,
   Flex,
+  Chip,
 } from '@mantine/core';
 import classes from './jobCard.module.css';
-import LabelValue from '../common/labelValue/LabelValue';
-import { MdOutlineClose } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-interface JobCardProps {
-  isAppliedView?: boolean;
-}
-
-const JobCard = ({ isAppliedView }: JobCardProps) => {
+const JobCardSummary = () => {
   return (
-    <Card withBorder radius="md" className={classes.card} px={24} py={12}>
+    <Card
+      withBorder
+      radius="md"
+      className={classes.card}
+      px={{ xs: 8, lg: 16 }}
+      py={12}
+    >
       <Grid columns={12} justify="center" grow>
-        <Grid.Col span={1} mt={4} order={{ base: 1 }}>
-          <Flex>
+        <Grid.Col span={1} mt={4}>
+          <Flex justify="center" align="center" h="100%">
             <Image
               src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80"
               radius={100}
-              w={90}
-              h={90}
+              w={{ xs: 70, lg: 90 }}
+              h={{ xs: 70, lg: 90 }}
             />
           </Flex>
         </Grid.Col>
-        <Grid.Col span={8} order={{ base: 3, md: 2 }}>
-          <Grid grow columns={8}>
-            <Grid.Col span={{ xs: 5, sm: 4, md: 5 }} order={{ base: 1 }}>
-              <Flex direction="column" justify="space-between" gap={8} h="100%">
+        <Grid.Col span={8}>
+          <Grid columns={8}>
+            <Grid.Col span={{ xs: 5, sm: 4, md: 5 }}>
+              <Flex direction="column" gap={8} h="100%">
                 <Stack gap={0}>
                   <Text tt="uppercase" c="solid" fw={700} size="lg">
                     <Link to={`/jobs/details?jobId=${2}`}>Position</Link>
@@ -65,34 +64,23 @@ const JobCard = ({ isAppliedView }: JobCardProps) => {
                 </Group>
               </Flex>
             </Grid.Col>
-            <Grid.Col span={{ xs: 3, sm: 3 }} order={{ base: 2 }}>
-              <Stack className={classes.otherDetails} justify="space-around">
-                <LabelValue label="Job Type:" value="Full-time" />
-                <LabelValue label="Setup:" value="Hybrid" />
-                <LabelValue label="Salary:" value="N/A" />
-                <LabelValue label="Visa Sponsorship:" value="N/A" />
-              </Stack>
+            <Grid.Col span={{ xs: 3, sm: 3 }}>
+              <Flex
+                className={classes.otherDetails}
+                direction="column"
+                justify="space-between"
+                h="100%"
+              >
+                <Chip size="xs">Full-time</Chip>
+                <Chip size="xs">Hybrid</Chip>
+                <Chip size="xs">Php100,000</Chip>
+              </Flex>
             </Grid.Col>
           </Grid>
-        </Grid.Col>
-        <Grid.Col span={{ base: 2 }} order={{ base: 2, md: 3 }}>
-          {isAppliedView && (
-            <Flex className={classes.ctaContainer} justify="flex-end" gap={24}>
-              <Chip>test</Chip>
-              <ActionIcon
-                variant="filled"
-                bg="red"
-                size="md"
-                aria-label="Delete Job Application"
-              >
-                <MdOutlineClose />
-              </ActionIcon>
-            </Flex>
-          )}
         </Grid.Col>
       </Grid>
     </Card>
   );
 };
 
-export default JobCard;
+export default JobCardSummary;

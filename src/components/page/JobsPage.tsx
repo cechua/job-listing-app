@@ -3,7 +3,7 @@ import JobCard from '../jobCard/JobCard';
 
 const JobsPage = () => {
   return (
-    <Container size="xl">
+    <Container size="lg">
       <Stack align="center">
         <JobCard />
         <JobCard />
