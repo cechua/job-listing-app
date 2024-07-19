@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 const links = [
   { link: '/jobs', label: 'Jobs' },
   { link: '/applications', label: 'Applications' },
+  { link: '/post-job', label: 'Post Job' },
 ];
 
 export function Header() {
