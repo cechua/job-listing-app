@@ -1,11 +1,16 @@
 import React from 'react';
 import JobForm from '../jobForm/JobForm';
+import { Container, Stack } from '@mantine/core';
+import CompanyForm from '../companyForm/CompanyForm';
 
 const PostJobPage = () => {
   return (
-    <div>
-      <JobForm />
-    </div>
+    <Container size="lg">
+      <Stack align="center">
+        <CompanyForm />
+        <JobForm />
+      </Stack>
+    </Container>
   );
 };
 

@@ -15,6 +15,7 @@ function App() {
         <Route path="jobs/details" element={<JobDetails />} />
         <Route path="applications" element={<ApplicationsPage />} />
         <Route path="post-job" element={<PostJobPage />} />
+
         <Route path="*" element={<Navigate to="/jobs" replace />} />
       </Routes>
     </BrowserRouter>
