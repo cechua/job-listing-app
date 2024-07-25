@@ -8,6 +8,7 @@ const links = [
   { link: '/jobs', label: 'Jobs' },
   { link: '/applications', label: 'Applications' },
   { link: '/post-job', label: 'Post Job' },
+  { link: '/profile', label: 'Profile' }, //remove this and put in user dropdown once log in is implemented
 ];
 
 export function Header() {

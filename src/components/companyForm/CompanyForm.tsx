@@ -1,20 +1,17 @@
 import { Stack, TextInput, Text, Button } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { JSONContent } from '@tiptap/react';
-import React, { useState } from 'react';
-import RichTextEditorComponent from '../common/richTextEditor/RichTextEditorComponent';
+import classes from './companyForm.module.css';
 
 interface FormValues {
   companyName: string;
   companyImage: string;
   companyLocation: string;
-  companyDescription: JSONContent | undefined;
   companyBusiness: string;
+  companySummary: JSONContent | undefined;
 }
 
 const CompanyForm = () => {
-  const [jobDescription, setJobDescription] = useState<JSONContent>();
-
   const form = useForm<FormValues>({
     mode: 'uncontrolled',
     initialValues: {
@@ -22,17 +19,20 @@ const CompanyForm = () => {
       companyImage: '',
       companyLocation: '',
       companyBusiness: '',
-      companyDescription: undefined,
+      companySummary: undefined,
     },
   });
 
   const handleSubmit = (formData: FormValues) => {
-    console.log({ ...formData, jobDescription });
+    console.log({ formData });
   };
 
   return (
     <>
-      <form onSubmit={form.onSubmit((values) => handleSubmit(values))}>
+      <form
+        onSubmit={form.onSubmit((values) => handleSubmit(values))}
+        className={classes.formContainer}
+      >
         <Stack gap={8}>
           <Text tt="uppercase" c="solid" fw={700} size="md" component="label">
             Affiliated Company
@@ -57,14 +57,17 @@ const CompanyForm = () => {
             key={form.key('companyBusiness')}
             {...form.getInputProps('companyBusiness')}
           />
-          <Text c="solid" fw={500} size="sm" component="label">
-            Job Description
-          </Text>
-          <RichTextEditorComponent
-            editContent={setJobDescription}
-            content={jobDescription}
+          <TextInput
+            label="Company Summary"
+            placeholder="Short summary of the company"
+            key={form.key('companySummary')}
+            {...form.getInputProps('companySummary')}
           />
-          <Button type="submit">Submit</Button>
+          <Stack align="end">
+            <Button type="submit" w="150px">
+              Submit
+            </Button>
+          </Stack>
         </Stack>
       </form>
     </>

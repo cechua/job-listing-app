@@ -10,6 +10,7 @@ interface FormValues {
   workSetup: string;
   salary: string;
   workArrangement: string;
+  workLocation: string;
   jobDescription: JSONContent | undefined;
 }
 
@@ -24,6 +25,7 @@ const JobForm = () => {
       workSetup: '',
       salary: '',
       workArrangement: '',
+      workLocation: '',
       jobDescription: undefined,
     },
   });
@@ -63,6 +65,11 @@ const JobForm = () => {
             label="Work Arrangement"
             key={form.key('workArrangement')}
             {...form.getInputProps('workArrangement')}
+          />
+          <TextInput
+            label="Office Location"
+            key={form.key('workLocation')}
+            {...form.getInputProps('workLocation')}
           />
           <Text c="solid" fw={500} size="sm" component="label">
             Job Description
